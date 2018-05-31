@@ -33,11 +33,10 @@
         <property name="sessionCacheSize" value="${mq.cache}"/>
     </bean>
 
-    <!-- 权限变更监听消费者 start -->
-    <bean id="permissionJmsListener" class="com.smart.sso.client.PermissionJmsListener">
-        <property name="ssoAppCode" value="${sso.app.code}"/>
-        <property name="authenticationRpcService" ref="authenticationRpcService"/>
-    </bean>
+	<!-- 权限变更监听消费者 start -->
+	<bean id="permissionJmsListener" class="com.smart.sso.client.PermissionJmsListener">
+		<property name="ssoAppCode" value="${sso.app.code}" />
+	</bean>
 
     <jms:listener-container destination-type="topic" acknowledge="auto" container-type="default"
                             connection-factory="jmsConnectionFactory">
