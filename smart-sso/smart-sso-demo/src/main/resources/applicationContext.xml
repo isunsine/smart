@@ -12,11 +12,13 @@
 	       http://www.springframework.org/schema/tx 
 	       http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<context:annotation-config />
+
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="fileEncoding" value="UTF-8" />
 		<property name="locations">
 			<list>
-				<!--服务参数配置(Zookeeper、MQ、Redis相关)
+				<!--服务参数配置(Zookeeper、Dubbo、MQ、Redis相关)
 				<value>classpath:service.properties</value>
 				 -->
 				<!--当前应用参数配置 -->
